@@ -1,0 +1,14 @@
+.bouton a {
+display:block;
+width:120px;
+line-height:24px;
+text-align:center;
+vertical-align:middle;
+background:url(boutonretourcopie.png) no-repeat;
+color:white;
+text-decoration:none;
+margin-left:465px;
+}
+.bouton a:hover {
+background:url(boutonretourcopie1.png) no-repeat;
+}
