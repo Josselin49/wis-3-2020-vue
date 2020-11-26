@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>LexiJob</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet"href="index.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> 
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+  
+    <BR>
+      <div class=minilogo>
+        <p>
+      <a href="accueil.html"><img src="LogoLXJ5mini.png" /></a>
+        </p>
+      </div>
+      
+    
+  <div class="bouton">
+  <p>
+    <a href="VendeurGD.html">Retour</a>
+ </p>
+</div>
+  
+  <style>
+
+    [v-cloak] {
+      display: none;
+    }
+
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    body{
+        font:15px/1.3 'Open Sans', sans-serif;
+        color: #3b4651;
+        text-align:center;
+        background: linear-gradient(#9da5af,#cbcccf)
+    }
+
+    a, a:visited {
+        outline:none;
+        color:#ffffff;
+    }
+
+    a:hover{
+        text-decoration:none;
+    }
+
+    section, footer, header, aside, nav{
+        display: block;
+    }
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="avocat">
+    VENDEUR<br>GRANDE DISTRIBUTION
+    </div>
+<br>
+
+<form id="main" v-cloak>
+
+    <div class="bar">
+        <!-- Create a binding between the searchString model and the text field -->
+
+        <input type="text" v-model="searchString" placeholder="Entrez votre recherche ici" />
+    </div>
+
+    
+    <ul>
+        <!-- Render a li element for every entry in the computed filteredArticles array. -->  
+        <li v-for="article in filteredArticles" style="text-indent:20px;">
+            <a v-bind:href="article.url"><img v-bind:src="article.image" /></a>
+            <p>{{article.title}}</p>
+            
+        </li>
+ 
+    </ul>
+
+</form>
+ 
+
+<div id="overlay3">
+    <div class="popup_block">
+        <a class="close" href=""><img alt="Fermer" title="Fermer la fenêtre" class="btn_close" src="croix.png"></a>
+        <img style=" margin: 0 0 0 0px;" alt="logo" src="abeille2.png">
+        <br><h2><em>Source</em></h2>
+  
+        
+        <p><a href="https://www.marketing-pgc.com/2012/02/09/le-lexique-de-la-grande-distribution/" target="_blank">"MARKETING PGC"</a>
+          <br>Inconditionnel du rayon nouveautés de ton hyper ? Accro aux campagnes de communication innovantes et actions  marketing en tout genre ? Passionné de digital ? Rejoins l’équipe de Marketing PGC, le blog de l’actualité de la grande consommation depuis 2010.</p>
+        
+    </div>
+  </div>
+<br><br>
+  
+<DIV class="appelcauses"
+  >
+Achat d'impulsion
+</div>
+<br>
+
+
+<div class="appeldescauses">    
+<p>Ce dit d’un achat effectué alors qu’il n’était pas initialement planifié. La décision se fait lorsque le client est confronté à l’offre. Il peut s’agir de l’achat plaisir : « Tiens Milka a sorti une nouvelle tablette » ou d’une incitation à l’achat provoqué lors d’opération de cross selling à l’initiative de l’industriel ou du distributeur : « je vois sur ce pack que si j’achète ce foie gras, je bénéficie de 50 centimes sur l’achat de toast Jacquet« .
+</p>
+</div>
+<br>  
+
+<p><a href="#overlay3"><em>Source</em></a></p>
+
+<br> <br>  <br>  <br> <br>
+<a name="Actishelf">
+
+ ......................
+
+<br><br><br>
+
+<div class="appelcauses"
+>
+Actishelf
+</div>
+<br><br>
+
+
+<div class="appeldescauses">    
+<p>Marque déposée par la société Média Performances qui propose aux industriels la mise en place de stop-rayons impactants (rigides, lumineux….) dans les rayons de distributeurs ciblés.
+</p>
+</div>
+<br>  <br>  <br> <br>  <br> 
+
+
+
+<br> <br>  <br>  <br> <br>
+<a name="alleecentr">
+
+ ......................
+
+<br><br><br>
+
+<div class="appelcauses"
+>
+Allée  Centrale / Pénétrante
+</div>
+<br><br>
+</a>
+
+<div class="appeldescauses">    
+<p>
+ C’est l’allée par laquelle les clients entrent en magasin.
+</p>
+</div>
+<br>  <br>  <br> <br>  <br> 
+<a name="alleetrans">
+ ......................
+
+ <br><br><br>
+
+ <div class="appelcauses"
+ >
+ Allée Transversale / Principale
+ </div>
+ <br><br>
+ </a>
+ 
+ <div class="appeldescauses">    
+ <p>
+C’est l’allée parallèle aux caisses, qui dessert chaque rayon.
+</p>
+</div>
+<br>  <br>  <br> <br>  <br> 
+
+ ......................
+ <a name="balisage">
+ <br><br><br>
+
+ <div class="appelcauses"
+ >
+ Balisage
+ </div>
+ <br><br>
+ </a>
+ 
+ <div class="appeldescauses">    
+ <p>
+Ensemble des outils d’aide à l’orientation et à l’information du client en point de vente (affiches, étiquettes, etc.)
+</p>
+</div>
+<br>  <br>  <br> <br>  <br> 
+
+ ......................
+ <a name="bisph"></a>
+ <br><br><br>
+
+ <div class="appelcauses"
+ >
+ Bisphénol A
+ </div>
+ <br><br>
+ </a>
+ 
+ <div class="appeldescauses">    
+ <p>
+ Composant chimique utilisé notamment dans les tickets de caisse. Il a subi des critiques au sujet d’effets néfastes qui ont conduit certaines enseignes à abandonner ce procédé.
+</p>
+</div>
+<br>  <br>  <br> <br>  <br> 
+
+ ......................
+ <a name="blanc"></a>
+ <br><br><br>
+
+ <div class="appelcauses"
+ >
+ Blanc
+ </div>
+ <br><br>
+ </a>
+ 
+ <div class="appeldescauses">    
+ <p>
+Désigne le gros électroménager (lave-linge, lave-vaisselle, réfrigérateur, etc.)
+</p>
+</div>
+<br>  <br>  <br> <br>  <br> 
+
+ ......................
+ <a name="blanc2"></a>
+ <br><br><br>
+
+ <div class="appelcauses"
+ >
+ Blanc (le) 
+ </div>
+ <br><br>
+ </a>
+ 
+ <div class="appeldescauses">    
+ <p>
+Désigne le linge de maison et en particulier la période de promotion annuelle qui se trouve traditionnellement au lendemain des fêtes de Noël.
+</p>
+</div>
+<br>  <br>  <br> <br>  <br> 
+
+ ......................
+ <a name="bogof"></a>
+ <br><br><br>
+
+ <div class="appelcauses"
+ >
+ BOGOF
+ </div>
+ <br><br>
+ </a>
+ 
+ <div class="appeldescauses">    
+ <p>
+ Anglicisme désignant la mécanique promotionnelle 1 acheté = 1 gratuit (Buy One Get One Free)
+</p>
+</div>
+<br>  <br>  <br> <br>  <br> 
+
+ ......................
+
+ <br><br><br>
+
+ <div class="appelcauses"
+ >
+ BR
+ </div>
+ <br><br>
+ </a>
+ 
+ <div class="appeldescauses">    
+ <p>
+ Sigle de Bons de Réduction, peut être avec remise différée (BRD) ou immédiate (BRI)
+</p>
+</div>
+<br>  <br>  <br> <br>  <br> 
+
+ ......................
+
+ <br><br><br>
+
+ <div class="appelcauses"
+ >
+ BRD
+ </div>
+ <br><br>
+ </a>
+ 
+ <div class="appeldescauses">    
+ <p>
+ : Sigle pour Bon de Réduction Différée. A opposer au BRI. Signifie que le bon de réduction donne droit à une remise sur l’achat du prochain produit ou moyennant l’envoi d’un courrier à l’organisme gestionnaire.
+</p>
+</div>
+<br>  <br>  <br> <br>  <br> 
+
+ ......................
+
+ <br><br><br>
+
+
+BRI : Sigle pour Bon de Réduction Immédiate. A opposer au BRD. Signifie que le bon de réduction donne droit à une remise aussitôt après passage en caisse.
+
+
+
+Brun : Désigne l’électronique multimédia, audiovisuel (TV, Hifi, etc.).
+
+
+
+BSA: Boissons Sans Alcool, parfois aussi appelé BRSA (Boissons Rafraîchissantes Sans Alcool)
+
+
+
+BVO: Diminutif de « Boucherie-Volaille »
+
+
+
+Cadencier : Désigne un document, papier ou informatique, destiné à gérer les stocks et passer les commandes d’un rayon.
+
+
+
+Cariste : Nom donné au conducteur d’un chariot élévateur.
+
+
+
+Casquette : Désigne la dernière étagère au sommet de la gondole qui permet de déposer les produits qui ne rentrent pas dans le linéaire.
+
+
+
+Casse : Désigne les marchandises périmées ou dégradées ne pouvant être vendues et signalées comme perte pour le magasin.
+
+
+
+CDAC : Sigle pour Commission Départementale d’Aménagement Commercial (anciennement CDEC)
+
+
+
+Chariot élévateur : Véhicule permettant le levage et le déplacement de charges. Cet appareil est utilisé dans les réserves pour accéder aux parties hautes de rack où est stocké la marchandise. Il n’est pas rare d’en voir en surface de vente avant ouverture. Ils permettent aux services décoration ou maintenance d’accéder à des parties inatteignables autrement. Une formation est nécessaire pour manoeuvrer l’appareil. Son conducteur est appelé cariste.
+
+
+
+Chef de Rayon, Manager : Personne chargée de gérer le centre de profit qu’est son rayon attribué. Suivant l’enseigne, l’étendue du rayon est plus ou moins vaste. Le chef de rayon ou manager est amené à gérer son équipe et les outils informatiques de gestion propre à chaque enseigne (commande, promotion, rentabilité, etc.).
+
+
+
+Client Mystère : Désigne un client fictif envoyé en point de vente afin de vivre l’expérience d’achat et rédiger un rapport sur son expérience à son mandataire. Cette appellation n’est pas propre à la distribution mais celle-ci y a parfois recours.
+
+
+
+CLS : Caisse Libre Service où le client passe lui-même les articles en caisse.
+
+
+
+CNAC : Sigle pour Commission Nationale d’Aménagement Commercial (anciennement CNEC)
+
+
+
+Code 4 : Jargon interne propre à l’enseigne E.Leclerc qui signifie que le distributeur menace son fournisseur de déréférencement de tout ou partie de son assortiment. Cet avertissement est un outil relativement efficace lors des négociations pour obtenir des contreparties. Si la menace se concrétise, l’application de la peine mène à un « code 9 ».
+
+
+
+Code 9 : Jargon interne propre à l’enseigne E.Leclerc qui signifie que le distributeur applique un déréférencement momentanée (mais sans durée précise) de tout ou partie de l’assortiment d’un fournisseur. Ceci afin d’obtenir une contrepartie.
+
+
+
+Commission Départementale d’Aménagement Commercial : Commission chargée d’accorder ou non la création, l’extension ou le transfert d’enseigne de distribution (toutes activités confondues).
+
+
+
+Cross-canal : Suit le multicanal. Permet aux vendeurs/distributeurs, de suivre son client avec son historique d’achat sur les différents canaux de vente mis à sa disposition.
+
+
+
+Cross-Docking : Vient de l’anglais « Croissement de quai ». Technique logistique qui revient à dispatcher les marchandises provenant en grosses quantités des différents fournisseurs, pour les répartir dans d’autres moyens de transport à destination d’un magasin. La commande des points de ventes est gérée par des préparateurs de commandes qui se trouvent sur l’entrepôt. Ex : Kellogg’s envoie au dépôt Leclerc x palette(s) de céréales Extra. Les préparateurs vont alors prélever de cette palette un certain nombre de colis qu’ils vont regrouper sur une nouvelle palette avec d’autre produit de l’épicerie sucrée afin de l’envoyer au point de vente commanditaire.
+
+
+
+Cross-Merchandising : Technique Merchandising visant à rapprocher deux produits complémentaires. Ex : produits désodorisants pour réfrigérateur au rayon fromage, des tires-bouchons au rayon alcool, ou encore les bombes de chantilly aux côtés des fraises en été. Cette technique favorise la vente additionnelle en générant des achats d’impulsion.
+
+
+
+Cross-Selling : Vient de l’anglais « Croisement de Vente ». Technique de vente qui revient à mettre en relation deux produits à l’usage complémentaire afin de générer plus de ventes, directement lors de l’achat ou en différé. Ex : Pour l’achat d’un appareil photo numérique Nikon, Energizer vous offre 1 euros sur ses piles. Cette technique favorise la vente additionnelle en générant des achats d’impulsion.
+
+
+
+Déclaration de caisse : Action comptage d’une caisse à la fin du service
+
+
+
+Deloter : Action de séparer deux unités de consommation initialement compris dans un lot. Ex : 2 boites de maïs jointe dans un lot à prix choc porteur de son propre gencod.
+
+
+
+Dépoter : Action de vider le contenu d’une palette pour le charger dans le rayon.
+
+
+
+Démarque : Proche du sens de « Casse » ce terme, en plus d’intégrer les produits périmés ou dégradés, comprend la perte et le vol.
+
+
+
+Déréférencement : Procédure de retrait d’un référence au sein de l’assortiment proposé par l’enseigne.
+
+
+
+DLUO : Sigle pour Date Limite d’Utilisation Optimale.
+
+
+
+DLC : Sigle pour Date Limite de Consommation.
+
+
+
+DPH : Sigle pour Droguerie Parfumerie Hygiène
+
+
+
+Drive : Vient de l’anglais « Conduire ». Qualifie la vente à emporter dans l’univers de la grande distribution mais également dans la restauration comme le célèbre Mc Drive de Mac Donald’s. Cette technique de vente revient à passer commande sur Internet et venir récupérer ses achats à un créneau horaire donné.
+
+
+
+EAN13 : voir Gencod
+
+
+
+Échantillon : Produit mis à disposition du client final ou du revendeur à titre gracieux pour faire découvrir celui-ci. Une campagne d’échantillonnage est parfois opérée par les industriels qui mettent gratuitement à la disposition des distributeurs un ou plusieurs colis de leur nouveauté pour accélérer son intégration en rayon.
+
+
+
+EEG : Sigle pour Etiquette Electronique de Gondole
+
+
+
+EGA ou EGAlim: Loi votée en octobre 2018 suit aux États Généraux de l’Alimentation qui avaient rassemblé producteurs, distributeurs et industriels. Les principales mesures ont été la limitation à 34% du taux de promotion et à 25% des volumes annuels, l’interdiction du terme « Gratuit » dans les promotions et le relèvement du SRP de 10%.
+
+
+
+ELS : Employé Libre Service. Egalement appelé gestionnaire. Le métier le plus répandu de la grande distribution.
+
+
+
+Entrée de magasin : C’est la zone de vente dès que l’on franchit les portiques de sécurité où se trouve généralement les thématiques saisonniaires
+
+
+
+EPCS : Acronyme pour Electroménager Photo Cinéma et Son. Désigne le département non alimentaire éléctronique, principalement chez Carrefour.
+
+
+
+Facing : Terme merchandising anglais qui détermine la face visible du produit au consommateur. Si le même produit est disposé sur 2 face côte à côte, on dit qu’il y a deux facings. Ne sont comptabilisé que les produits qui touchent à la surface de pose (étagère, bac, grille …) et pas ceux empilés sur les mêmes produits. L’expression « faire le facing »  signifie que l’on remet les produits bien en place, face aux clients et de façon à montrer un rayon plein avec les produits prêts à prendre.
+
+
+
+FIFO : Acronyme anglais pour First In First Out. Méthode de gestion des stocks qui reviens à faire en sorte que le premier article rentré en stock, soit le premier sorti/vendu. Pour y parvenir, il faut gérer les rotations/dates du rayon, et faire en sorte que les dates de consommation les plus courtes soient sur le devant de la tablette. Ainsi les produits dont la DLC ou DLUO est la plus proche sont les premiers pris par les clients. L’équivalent de cet acronyme en français est le PEPS (Premier Entré, Premier Sorti).
+
+
+
+Fond de Rayon : Désigne les produits ou les ventes réalisées dans le rayon seulement, sans action promotionnelle et sans mise en avant
+
+
+
+Froid Négatif : se dit lors d’une température négative. Le terme est utilisé en surgelé lorsque les distributeurs ou industriels utilisent du mobilier réfrigérant capable d’atteindre des températures inférieures à 0°C
+
+
+
+Froid Positif : se dit lors d’une température positive. Le terme est utilisé en frais lorsque les distributeurs ou industriels utilisent du mobilier réfrigérant capable d’atteindre des températures au dessus de 0°C mais inférieures à 6°C.
+
+
+
+Gencod : C’est l’identité numérique propre à chaque unité de bien qui permet d’être scanné lors du passage en caisse notamment. Il est généralement constitué de 13 chiffre. Ceux commençant par 3 indiquent que le produit est conditionné en France.
+
+
+
+GMS : Grande et Moyenne Surface. Sous ce sigle son englober des notions plus précises : les GSA et les GSS.
+
+
+
+Gondole : Une gondole est un mobilier commercial très courant dans la distribution libre-service. Généralement métalliques, les gondoles ont la particularité d’être très modulable. La hauteur des étagères peut être aisément modifier.
+
+
+
+GSA : Sigle pour Grande Surface Alimentaire.
+
+
+
+GSS : Sigle pour Grande Surface Spécialisée.
+
+
+
+Grande Surface Spécialisée (GSS) : Désigne les enseignes de la grande distribution spécialisée : exemple pour l’ameublement : Atlas, Fly, Conforama; pour le sport : Décathlon, Twinner, GoSport …
+
+
+
+Grande Surface Alimentaire (GSA) : Désigne les enseignes de la grande distribution alimentaire (Hypermarché, Supermarchés ou Hard Discount : Carrefour, Leclerc, Lidl…) mais aussi les grandes surfaces spécialisées en alimentaire (ex : Grand Frais)
+
+
+
+GT : Sigle pour Groupe de Travail. Terme utilisé par la centrale nationale Leclerc : le Galec ou dans ces unités régionales : SCA, pour désigner des groupes de réflexion sur des sujets divers; Exemple : GT Promo, GT Méthode, GT Marketing. Le terme est repris par certains industriels fournisseurs en interne.
+
+
+
+Hard Discount : Circuit de distribution qui désigne des surfaces de ventes appliquant des prix généralement plus bas que ceux observés en SM ou HM lié notamment à des frais de gestion réduits (assortiment, service, personnel…)
+
+
+
+HD : Sigle pour Hard Discount
+
+
+
+HM : Sigle pour Hypermarché.
+
+
+
+Hypermarché : Circuit de distribution qui désigne une surface de vente alimentaire de plus de 2 500m2. On généralise souvent l’appellation Hypermarché à certaines enseignes, majoritairement composés de grandes surfaces de ventes (Auchan, Carrefour, Cora, Géant, Leclerc)
+
+
+
+Kakémono : Outil de PLV qui désigne une grande affiche plus longue que large. Bien souvent il est positionné sur les joues (côtés) de la TG, mais il peut également être suspendu dans le vide
+
+
+
+Linéaire : Désigne le rayonnage disponible pour la présentation des produits en surface de vente. Le linéaire développé se calcule en multipliant le linéaire au sol avec le nombre de niveaux. Il est exprimé en mètres.
+
+
+
+LME : Loi de Modernisation de l’Economie votée en 2008 ayant fortement affecté l’économie et en particulier le commerce. On lui doit notamment les soldes flottants, la possibilité d’abaisser le seuil de revente à perte ou encore la modification du rapport de force en négociation entre distributeurs et industriels.
+
+
+
+Lot : La vente en lot est une technique promotionnelle qui consiste à vendre le produit non pas à l’unité, mais par 2 ou 3 exemplaires, voire plus en les attachants entre eux.
+
+
+
+Lot virtuel : Le lot virtuel est l’application de la technique de vente promotionnelle du lot mais sans regroupement physique des produits entre eux. Le consommateur peut alors constituer lui-même son lot, conformément aux modalités de l’opération promotionnelle, en panachant les références si cela est possible par exemple. Exemple : Danette propose – 30 % sur l’achat de 2 produits de sa gamme en pot par 4. Le client peut alors acheter un code au chocolat et un autre à la pistache. Cette technique est plus souple, pour le consommateur comme l’industriel, que la méthode de lot simple. La mécanique peut aussi être progressive. Exemple : Bonne Maman propose 20 % pour l’achat de 2 produits et 30 % pour l’achat de 3 produits.
+
+
+
+LS : Sigle pour libre-service. Le libre service désigne le mode de vente suivant lequel les clients prélèvent eux même les produits dans les linéaires. Ce mode de vente s’oppose à la vente assistée lors de laquelle un employé délivre le produit souhaité comme c’est le cas dans la zone traditionnelle / marché (hors fruits et légumes).
+
+
+
+Mag3 : Concept de magasin mise en place par Intermarché à partir de 2005 qui définit une charte de mobilier et de décoration.
+
+
+
+Mag3 e : Concept de magasin mise en place par Intermarché à partir de 2014 qui définit une charte de mobilier et de décoration. Le magasin pilote a été inauguré en octobre 2014 à Agen après plus d’un an de travaux.
+
+
+
+Merchandising : Science qui consiste à optimiser l’agencement et la présentation d’un magasin, d’un rayon voire d’un mobilier, pour générer plus de ventes. La définition du merchandising a été simplifiée par l’américain  Kepner avec la formule des 5 B : le bon produit, au bon endroit, au bon prix, au bon moment, dans les bonnes quantités. Un bon merchandising permet de réduire les zones froides.
+
+
+
+Mise en Avant (MEA) : Action merchandising temporaire revenant à mettre à l’honneur un produit sur des espaces promotionnels ou/et à l’aide de PLV.
+
+
+
+Marque de Distributeur (MDD) : Désigne les marque propre à une enseigne de distribution. Exemple : Carrefour, Marque repère, … Elle peut être Premier Prix, Standard ou Premium.
+
+
+
+MDD : Sigle pour Marque de Distributeur.
+
+
+
+Multicanal (vente) : fait de vendre via plusieurs canaux. Magasin physique, site internet, site mobile, drive, etc.
+
+
+
+NIP : Nouveaux instruments de promotion, tels que les cartes de fidélité, cagnottes, bons de réduction numériques…
+
+
+
+Omnicanal : Suit le multicanal et le crosscanal. Permet aux vendeurs/distributeurs de suivre son client sur les différents canaux de vente mis à sa disposition et de manière simultanée. Le client peut par exemple être avec son smartphone dans un point de vente : deux canaux utilisés en même temps.
+
+
+
+Palette : Structure de bois de taille standard 80×120 ou 100×120 qui permet le stockage et le transport de marchandise
+
+
+
+Panier Moyen ou Caddie Moyen : Désigne le montant moyen du ticket de caisse lors d’un passage en caisse.
+
+
+
+PDL : Acronyme pour « Part de Linéaire ». Représente la part des produits d’une marque dans un rayon défini.
+
+
+
+PDM : Acronyme pour « Part de Marché ». Utilisé en valeur (chiffre d’affaires) ou en volume (nombre de produits vendus), il permet de décrire la taille d’un produit, d’une marque ou d’un magasin proportionnellement à son marché.
+
+
+
+PEPS : Acronyme pour Premier Entré, Premier Sorti. Méthode de gestion des stocks qui reviens à faire en sorte que le premier article rentré en stock, soit le premier sorti/vendu. Pour y parvenir, il faut gérer les rotations/dates du rayon, et faire en sorte que les dates de consommation les plus courtes soient sur le devant de la tablette. Ainsi les produits dont la DLC ou DLUO est la plus proche sont les premiers pris par les clients. L’équivalent de cet acronyme en anglais est le FIFO (First In First Out).
+
+
+
+PFLS : Sigle pour Produits Frais Libre Service. vous le trouverez également sous appellation FLS ou PLS
+
+
+
+PGC : Sigle pour Produits de Grande Consommation
+
+
+
+Picking : Méthode de drive la plus utilisée en France. Cette technique revient à prélever directement en magasin les produits commandés sur le site internet du drive. Cette méthode est possible uniquement dans le cas d’un drive accolé à un point de vente physique. Elle est nettement moins coûteuse à l’investissement mais également beaucoup moins efficace en termes de temps collecte. Elle s’oppose au modèle de drive entrepôt qui consiste à disposer d’un entrepôt de stockage dédié au drive, optimisé pour une collecte efficace.
+
+
+
+Plan merchandising : représentation imagée du rayon tel qu’il devra apparaître après réimplantation. Également appelé Planogramme.
+
+
+
+Plannogramme : Voir « plan merchandising »
+
+
+
+PLV : Sigle de Publicité sur le Lieu de Vente
+
+
+
+Pointeau : Désigne le lieu d’accueil de la sécurité. C’est un lieu de passage administré par un agent de sécurité pour les commerciaux souhaitant entrer en surface de vente. Ce lieu
+
+
+
+PPI : Sigle pour Pain Pâtisserie Industrielle
+
+
+
+PPMI : Prix Public Minimum Indicatif. Indicateur spécifique à l’enseigne Leclerc qui détermine les prix à appliquer sur une sélection de produits incontournables, en fonction de leur niveau de prix dans la zone de chalandise.
+
+
+
+Premier Prix : Désigne les produits de Marque Distributeur Discount, c’est à dire au prix le plus bas.
+
+
+
+Présentoirs : Outil de PLV destiné à la fois à des fins pratiques et esthétiques. Il permet de maintenir le produit en rayon tout en le mettant en avant
+
+
+
+Prix Magique : Technique Marketing agissant sur le prix afin de feindre un prix inférieur. Exemple : 9,99 au lieu de 10 euros, ou bien un prix rond (pour les faibles montants) « Tout à 2 euros ».
+
+
+
+Prix Psychologique : A ne pas confondre avec le prix magique. C’est une méthode qui vise à déterminer le prix idéal pour maximiser la taille de la clientèle. Pour déterminer ce prix, l’échantillon représentatif doit répondre à deux questions : En dessous de quel prix jugeriez vous la qualité du dit produit comme trop faible pour l’acheter ? Au dessus de quel prix, ce produit deviendrait trop onéreux pour que vous l’achetiez ?
+
+
+
+Produit d’appel : Un produit d’appel est un produit majeur, aux ventes importantes qui génère du trafic en point de vente ou vers une promotion et conduit le chaland vers des produits moins connus et sur lequel le distributeur/fabricant génère plus de rentabilité.
+
+
+
+Produit girafe : Désigne un produit bénéficiant d’une mécanique promotionnelle visant à accroître son volume, sans agir sur le prix de vente. Par exemple : le jus d’orange est habituellement vendu en bouteille d’un litre. Dans le cadre d’une promotion, il peut être vendu avec 33 cl en plus, ou bien avec 33 % de plus. Le contenant étant agrandi pour contenir la quantité additionnelle, généralement dans le sens de la hauteur (mais parfois en profondeur ou largeur), on parle de girafe.
+
+
+
+Proximité : Circuit de distribution qui désigne une petite surface de vente implanté généralement en région urbain ou en bourg. On généralise souvent l’appellation Proximité à certaines enseignes, majoritairement composés de très petites surfaces de ventes urbaines (Carrefour City/Contact, Franprix, Petit Casino, G20, Proxi, Huit à 8, Marché Plus …)
+
+
+
+Publicité sur le Lieu de Vente : Désigne tous les outils marketing mis à la disposition de la promotion de service ou produits disponible en point de vente. Présentoirs, Stop Rayon, Kakémono, Décors, …
+
+
+
+PVC : Prix de Vente Consommateur ou Prix de Vente Conseillé
+
+
+
+Recadrage : Action de retravailler l’emplacement des produits sur une famille précise du rayon afin d’en optimiser le positionnement et donc les ventes.
+
+
+
+Référencement : Procédure d’intégration d’un produit au sein de l’assortiment du distributeur.
+
+
+
+Réimplantation : Consiste à vider l’intégralité du rayon pour le reconstituer à nouveau de manière optimisée. Il est fréquent de s’appuyer sur un plan merchandising.
+
+
+
+Rolls : Substitue de la palette, cette structure métallique montée sur roulette permet d’y déposer de la marchandise afin de transporter son contenu jusqu’au rayon afin de remplir le linéaire.
+
+
+
+Rotation : Désigne le renouvellement de la marchandise en rayon. Sa signification est proche des VMH ou VMM. Un produit dont les rotations seront de 8 unités semaines signifie que 8 produits sont vendus chaque semaine. Subtilité : « Faire ses rotations » revient à s’assurer que les dates courtes se trouvent bien en devant de gondoles, prêtes à être prises par les clients, de façon à ce que les dates longues se trouvent moins accessible et que la casse soit limitée.
+
+
+
+SRP : Sigle pour Seuil de Revente à Perte
+
+
+
+Seuil de Revente à Perte (SRP) : Niveau minimum en dessous duquel le distributeur vend à perte, c’est à dire moins cher que ce que lui à coûté la marchandise initialement. En France il est interdit de revendre à perte sauf en période de soldes.
+
+
+
+SM : Sigle pour Supermarché
+
+
+
+SOGEC : Société de gestion de promotion, elle concentre une partie des remontées bons de réduction. Lors de leur passage en caisse, les clients laisse à l’hôte le bon de réduction pour bénéficier de la remise sur son ticket de caisse. Pour se faire rembourser la valeur du bon de réduction, financé par le fournisseur du point de vente dans la plupart des cas, le magasin doit alors retourner chaque bon. L’organise de collecte mesure ensuite l’efficacité de la campagne à l’aide du taux de remontée. Il existe d’autres prestataires comme HighCo.
+
+
+
+Squelette : Terme merchandising qui désigne qui désigne l’étape de réorganisation d’un rayon. Après avoir totalement vidé un rayon, les merchandiseurs disposent uniquement quelques unités des produits constituant le rayon à la place qui leur ai de nouveau attribué. Cela revient à faire un puzzle test pour s’assurer que chaque produit à sa place avant de charger le rayon avec toute la marchandise. Lors d’une réimplantation, il est nécessaire avant toute chose de prélever le squelette sur le rayon actuelle. Il faut prélever autant d’unités que de facings nécessaires à la réalisation du nouveau plan merchandising.
+
+
+
+Stop Rayon : Outil de PLV destiné à mettre en avant un produit en fond de rayon. Disposé face à produit et perpendiculaire au rayon, il attire le regard du chaland vers le produit. Il contient des visuels ou informations complémentaires sur le produit mis en avant.
+
+
+
+Supermarché : Circuit de distribution qui désigne une surface de vente alimentaire de moins de 2500m2. On généralise souvent l’appellation Supermarché à certaines enseignes, majoritairement composés de petites surfaces de ventes (Super U, Intermarché, Casino, Carrefour Market, Simply Market, Monoprix)
+
+
+
+Surface de vente : Englobe toute la superficie (en m2) mise à disposition de la vente, incluant les rayonnages, les allées et les caisses
+
+
+
+Texon, MSI : Nom propre désignant l’appareil mobile de commande propre à chaque enseigne
+
+
+
+TG : Tête de gondole – Désigne l’extrémité d’un rayon donnant sur une allée principale et dans laquelle sont souvent exposé les promotions en cours. Les distributeur limite le nombre de produits mis en avant afin de massifier l’offre et la rendre plus visible.
+
+
+
+TPE : Terminal Électronique de Paiement permettant le paiement par carte bancaire notamment.
+
+
+
+TR : Désigne chez Carrefour les appareils portatifs permettant de préparer une commande Drive en picking
+
+
+
+Transpalette : Appareil de manutention de palette. Il peut être mécanique ou électrique. Également appelé Tirepal ou Transpal.
+
+
+
+Trade Marketing : à mi chemin entre le fournisseur et le distributeur, cette pratique marketing contribue au développement d’un partenariat entre ces deux entités afin de répondre aux besoins des consommateurs.
+
+
+
+TSP (Taux sur Possible) : chiffre utilisé par les commerciaux en magasin pour mesurer la proportion de produits référencés dans un magasin par rapport à l’objectif fixé. Par exemple, dans un petit Carrefour Market, le fournisseur X va proposer une liste de 30 produits à référencer. Le TSP se calculera en fonction de ces 30 produits.
+
+
+
+« Tous Commerçant » : Concept marchand/managérial à l’initiative de Carrefour Market qui réorganise la façon de gérer les supermarchés du groupe Carrefour. Dans la plupart des magasins, deux managers magasin gèrent des gestionnaires polyvalents capables de travailler sur n’importe quel rayon voir sur d’autre poste de la grande distribution comme les caisses.
+
+
+
+Unité de Besoin (UB) : Unité produit unique qui répond à un besoin. Exemple : le pot de Nutella 200g est une UB, la brioche La boulangère 500g aussi. Un panier avec 3 pots de Nutella 200g et 2 brioches La boulangère 500 g contient 2 UB et 5 UC. Une UB = 1 gencod.
+
+
+
+Unité de Consommation (UC) : Nombre d’unités de produit. Exemple : 10 dentrifrices = 10 UC
+
+
+
+VMH : Sigle signifiant Ventes moyennes hebdomadaires. Ces ventes indiquent les rotations réelles ou estimées d’un article et s’expriment en euros ou en unités de consommation (UC)
+
+VMM : Sigle signifiant Ventes moyennes mensuelles. Ces ventes indiquent les rotations réelles ou estimées d’un article et s’expriment en euros ou en unités de consommation (UC).
+
+
+
+Zone de Chalandise : Définie la zone géographique sur laquelle se trouve la clientèle du magasin. Les zones de chalandise des magasins se chevauchent entre elles, c’est pourquoi on précise également en grande distribution alimentaire que la zone de chalandise est le parc de magasin auprès duquel le point de vente réalise des comparaisons en termes de ventes, de prix, de fréquentation …
+
+
+
+Zone chaude :Situe la zone du magasin qui est susceptible d’être la plus visitée par les clients car proche des lieux de passage obligatoires de ceux-ci (exemple : entrée, caisse, etc.).Ce terme de zone chaude  est à mettre en opposition avec la zone froide. Cette notion s’applique également à l’échelle d’un rayon. Celui-ci sera organisé de façon à mettre les deux points chauds (concentrant les produits les plus achetés) aux deux extrémités. Cela permet de faire circuler les clients dans l’ensemble du rayon, ou du magasin, de façon à générer des achats d’impulsion. En prenant l’exemple des fromages libres services, les camemberts/coulommiers seront à l’entrée du rayon, les râpés à la sortie.
+
+
+
+Zone froide : Situe la zone du magasin qui est susceptible d’être moins visiter par les clients du fait de l’éloignement par rapport aux points de passage obligatoires (exemple : entrée, caisse, etc.) C’est donc à cet endroit que les produits d’appels seront placés, pour générer du trafic. On y retrouve par exemple les liquides. Ce terme de zone froide est à mettre en opposition avec la zone chaude. Cette notion s’applique également à l’échelle d’un rayon. Celui-ci sera organisé de façon à mettre les deux points chauds (concentrant les produits les plus achetés) aux deux extrémités. Cela permet de faire circuler les clients dans l’ensemble du rayon, ou du magasin, de façon à générer des achats d’impulsion. En prenant l’exemple des fromages libres services, les camemberts/coulommiers seront à l’entrée du rayon, les râpés à la sortie.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+  
+  
+  
+  
+  <div class="icon-bar">
+    <a href="http://www.facebook.com" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
+    <a href="http://www.twitter.com" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
+    <a href="http://www.instagram.com" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a> 
+    <a href="http://www.snapchat.com" target="_blank" class="snapchat"><i class="fa fa-snapchat"></i></a>
+    <a href="http://www.whatsapp.com" target="_blank" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+    <a href="http://www.paypal.com" target="_blank" class="paypal"><i class="fa fa-paypal"></i></a>
+  </div>
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="my-menu1">
+    <!-- Le label -->
+    <label for="toggle-block"><br>A-B<br><img src="fleche2.png" id="set"/></a></label>
+  
+    <!-- La checkbox que je choisis cochée au démarrage -->
+    <input id="toggle-block" name="toggle-block" type="checkbox" unchecked style="visibility:hidden"/>
+  
+    <!-- Le bloc à afficher -->
+    <div id="my-block1"><span title=""><a href="avocat2.html#C">C.D<br></a>..</span></div></div>
+  
+  
+  
+  
+  </div>
+  
+  
+  
+  
+    <div class="tetefourmi2"> 
+      <img src="Tetefourmi copie2.png" alt="" />
+    </div>
+  
+  
+    <div class="teteabeille"> 
+      <img src="teteabeille copie.png" alt="" />
+    </div>
+  
+    <div id="scroll_to_top">
+      <a href="#top"><img src="flechehaut copie.png" alt="Retourner en haut" /></a>
+  </div>
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+  &copy; 2019<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, LexiJob ® .
+  
+  </body>
+  </html>

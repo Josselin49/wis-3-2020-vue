@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta HTTP-EQUIV="Page-Enter" CONTENT="revealtrans(duration=4.0, transition=1)">
+    <meta HTTP-EQUIV="Page-Exit" CONTENT="revealtrans(duration=4.0, transition=1)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <title>LexiJob</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet"href="index.css"/>
+
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+ 
+  </head>
+  <body>
+  
+
+
+
+
+<div class="icon-bar">
+  <a href="http://www.facebook.com" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="http://www.twitter.com" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="http://www.instagram.com" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a> 
+  <a href="http://www.snapchat.com" target="_blank" class="snapchat"><i class="fa fa-snapchat"></i></a>
+  <a href="http://www.whatsapp.com" target="_blank" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+  <a href="http://www.paypal.com" target="_blank" class="paypal"><i class="fa fa-paypal"></i></a>
+</div>
+  
+  <style>
+
+    [v-cloak] {
+      display: none;
+    }
+
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    body{
+        background-color: #ffffff;
+        font:10px/1.3 'Open Sans', sans-serif;
+        color: #2f353a;
+        text-align:center;
+        background: linear-gradient(#9da5af,#cbcccf) fixed;
+        float:none;
+    }
+
+    a, a:visited {
+        outline:none;
+        color:#ffffff;
+        float:none;
+    }
+
+    a:hover{
+        text-decoration:none;
+        float:none;
+    }
+
+    section, footer, header, aside, nav{
+        display: block;
+        float:none;
+    }
+  </style>
+
+  
+<div id="my-menu">
+  <!-- Le label -->
+  <label for="toggle-block"><img src="settings2 copie.png" id="set"/></a></label>
+
+  <!-- La checkbox que je choisis cochée au démarrage -->
+  <input id="toggle-block" name="toggle-block" type="checkbox" unchecked style="visibility:hidden"/>
+
+  <!-- Le bloc à afficher -->
+  <div id="my-block"><span title="Mentions Légales"><a href="CGV.html"><img src="home.png"/></a>
+  </span><span title="A propos"><a href="apropos.html"><img src="nous.png"/></a></span><span title="Où sommes nous"><a href="lieu.html"><img src="map.png"/></a>
+  </span><span title="Boutique"><a href="boutik.html"><img src="boutik.png"/></a></span><span title="Don"><a href="don.html"><img src="don.png"/></a></span> </div>
+
+</div>
+  
+
+ 
+  <div>
+  <p>
+  <br>
+  <center><img src="LogoLXJ5 copie.png"/></center>
+  <br>
+  <center><img src="Soustitre.png"/></center>
+  </p>
+  </div>
+ 
+
+    
+    
+    <div class="bouton17">
+    <p>
+ <a href="index.html">Entrez</a>
+    </p>
+    </div>
+
+ <p>
+      <button class="button" data-modal="modalOne"> &nbsp;&nbsp;Contactez-nous&nbsp;&nbsp;</button>
+    </p>
+    <p>
+      <button class="button" data-modal="modalTwo">&nbsp;&nbsp;Contribuez au lexique&nbsp;&nbsp;</button>
+    </p>
+    <div id="modalOne" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <a class="close">&times;</a>
+          <form action="/">
+            <h2>Contactez-Nous</h2>
+            <div><img style=" margin: 0 0 0 0px;" alt="logo" src="abeille2.png">
+              <br>
+              <input class="fname" type="text" name="name" placeholder="Nom">
+              <input type="text" name="name" placeholder="Email">
+              <input type="text" name="name" placeholder="Numéro de téléphone">
+              <input type="text" name="name" placeholder="Site Web">
+            </div>
+            <span>Message</span>
+            <div>
+              <textarea rows="4"></textarea>
+            </div>
+            <button type="submit" href="/">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div><br><br>
+    <div id="modalTwo" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <span class="close">&times;</span>
+          <form action="/">
+            <h2>Contribuez au lexique</h2>
+            <div><img style=" margin: 0 0 0 0px;" alt="logo" src="fourmi copie.png">
+              <br>
+              <input class="fname" type="text" name="name" placeholder="Métier">
+              <input type="text" name="name" placeholder="Terme">
+              <input type="text" name="name" placeholder="Synonyme">
+              <input type="text" name="name" placeholder="Votre nom">
+            </div>
+            <span>Définition</span>
+            <div>
+              <textarea rows="4"></textarea>
+            </div>
+            <button type="submit" href="/">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+             var modalBtns = [...document.querySelectorAll(".button")];
+      modalBtns.forEach(function(btn){
+        btn.onclick = function() {
+          var modal = btn.getAttribute('data-modal');
+          document.getElementById(modal).style.display = "block";
+        }
+      });
+      
+      var closeBtns = [...document.querySelectorAll(".close")];
+      closeBtns.forEach(function(btn){
+        btn.onclick = function() {
+          var modal = btn.closest('.modal');
+          modal.style.display = "none";
+        }
+      });
+      
+      window.onclick = function(event) {
+        if (event.target.className === "modal") {
+          event.target.style.display = "none";
+        }
+      }
+</script>
+<br><br>
+
+<div class=apple>
+  <p>
+    <a href="http://www.applestore.com"><img src="apple.png" /></a>
+    <a href="http://www.play.google.com"><img src="googleplay.png" /></a>
+   </p>
+  </div> 
+
+
+<div class="photogauche"> 
+  <p>Aidez-nous
+  <a href="https://www.paypal.com/donate/?token=cANcQveYTQfI2oS0cmH0u-N5EWNe4etKrYS7fzHdKV_GsoGGm9dWNc3ErvlSZBP9ADfWeDz8A3pY9w2Z"><img src="donate.png" /></a> 
+  </p>
+  </div>
+
+
+
+
+
+
+
+<br><br><br>
+
+ 
+
+ <div class="mention">
+&copy; 2019<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, LexiJob ® .
+</div>
+
+</p>
+
+<div class="teteabeille"> 
+  <img src="teteabeille.png" alt="" />
+</div>
+  
+   </div>
+
+  </body>
+</html>
+  
+  
+  
